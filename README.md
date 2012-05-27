@@ -9,6 +9,8 @@ A simple repository for me to experiment and work on Node.js projects before spi
 
 The DateValidator project is to create a simple Date validator for both client-side and server-side JavaScript. At the moment, the goal is to keep things small and focus only on ensuring Day, Month, and Year are valid.  It is not intended to have the power of the node-dateutils project.
 
+- This Project has moved to the node-DataValidator repository.
+
 ## Luhn ##
 
 The Luhn project will hold a browser and node package for validating credit card numbers using the Luhn algorithm.
