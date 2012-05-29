@@ -1,28 +1,21 @@
-Node-Incubator
-==============
+ABA-Validator
+=============
 
-A simple repository for me to experiment and work on Node.js projects before spinning them off into their own dedicated repositories.  This repository will have only temporary or exploritory projects in it.  Once a project is established enough, I'll move it out into it's own repository.
+The American Bankers Association validation module provides a way of validating US-based Routing Number both on the client side in the user's browser as well as server side with Node.js.
 
-# Current Projects #
+## Installation ##
 
-## Luhn ##
+TBD
 
-The Luhn project will hold a browser and node package for validating credit card numbers using the Luhn algorithm.
+## Testing ##
 
-## ABA ##
+TBD
 
-The US American Bankers Association validation for routing numbers.
+## Usage ##
 
-# Previous Projects #
+TBD
 
-## DateValidator ##
-
-The DateValidator project is to create a simple Date validator for both client-side and server-side JavaScript. At the moment, the goal is to keep things small and focus only on ensuring Day, Month, and Year are valid.  It is not intended to have the power of the node-dateutils project.
-
-- This Project has moved to the node-DataValidator repository.
-
-
-# License #
+## License ##
 
 Copyright (c) 2012 James Eggers
 
