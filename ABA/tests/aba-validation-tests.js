@@ -22,6 +22,10 @@ describe("ABA Validation", function(){
 			aba.validate(_VALID_ROUTING_NUMBER + "A").should.be.false;
 		});
 		
+		it("should not allow a routing number that contains just 0's", function(){
+			aba.validate("000000000").should.be.false;
+		});
+		
 	});
 	
 	describe("Happy Path", function(){
