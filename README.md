@@ -13,18 +13,19 @@ The Importer project provides a simple module that, when passed a directory, wil
 
 The Luhn project will hold a browser and node package for validating credit card numbers using the Luhn algorithm.
 
-## ABA ##
-
-The US American Bankers Association validation for routing numbers.
-
 # Previous Projects #
 
 ## DateValidator ##
 
 The DateValidator project is to create a simple Date validator for both client-side and server-side JavaScript. At the moment, the goal is to keep things small and focus only on ensuring Day, Month, and Year are valid.  It is not intended to have the power of the node-dateutils project.
 
-- This Project has moved to the node-DataValidator repository.
+- This Project has moved to the [node-DataValidator repository](https://github.com/JamesEggers1/node-DateValidator).
 
+## ABA ##
+
+The US American Bankers Association validation for routing numbers.
+
+- This Project has moved to the [node-ABAValidator repository](https://github.com/JamesEggers1/node-ABAValidator).
 
 # License #
 
