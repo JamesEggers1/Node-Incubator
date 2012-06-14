@@ -5,6 +5,10 @@ A simple repository for me to experiment and work on Node.js projects before spi
 
 # Current Projects #
 
+## Importer ##
+
+The Importer project provides a simple module that, when passed a directory, will import in all node modules into an object or array to be used by other modules.  Very useful for dynamically generated scripts or scripts of similar purpose and definition (e.g. database migration scripts).
+
 ## Luhn ##
 
 The Luhn project will hold a browser and node package for validating credit card numbers using the Luhn algorithm.
