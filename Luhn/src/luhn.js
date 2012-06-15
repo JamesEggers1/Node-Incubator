@@ -14,10 +14,6 @@ var namespace;
 					return true;
 				}
 
-				if (length < 15) {
-					return false;
-				}
-
 				if (isNaN(iCCN) || !/^[0-9]+$/.test(trimmed)) {
 					return false;
 				}
