@@ -13,10 +13,14 @@
     "node": "*"
   },
   "scripts": {
-	"test": "make test"
+	"test": "mocha ./tests/importer-tests.js -R spec"
   },
   "tags": [ "ach", "validation", "browser"],
   "bugs": {
     "url": "https://github.com/JamesEggers1/node-ABAValidator/issues"
+  },
+  "devDependencies": {
+	"mocha": "1.2.0",
+	"should": "0.6.3"
   }
 }
