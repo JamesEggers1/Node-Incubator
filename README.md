@@ -5,6 +5,14 @@ A simple repository for me to experiment and work on Node.js projects before spi
 
 # Current Projects #
 
+## Database Migrator (coming soon) ##
+
+After looking around NPM, I haven't been able to find a good database migrator that works consistently.  So I'm going to write my own after the importer project gets done.
+
+## npm-bootstrapper (coming soon) ##
+
+The npm-bootstrapper will be an automation utility that'll create a number of base files and directories that I find myself creating for each of my npm packages.
+
 ## Importer ##
 
 The Importer project provides a simple module that, when passed a directory, will import in all node modules into an object or array to be used by other modules.  Very useful for dynamically generated scripts or scripts of similar purpose and definition (e.g. database migration scripts).
