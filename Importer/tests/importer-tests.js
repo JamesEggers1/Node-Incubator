@@ -29,20 +29,12 @@ describe("Importer.js", function(){
 	});
 	
 	describe("Reading Files", function(){
-	
-		/*it("should throw an exception if there was an error reading the directory.", function(){
-			var fs = require("fs");
-			fs.readdir = function(path, cb){
-				cb({"path": "test"}, []);
-			};
-			(function(){new Importer("tests");}).should.throw("Error reading files from path 'tests'");
-		});*/
 		
 		it("should import all modules from the filenames from the directory.", function(){
 			var path = "tmp"
 				, count = 3;
 				
-			//_helpers.setup(path, count);
+			_helpers.setup(path, count);
 			
 			try {
 				var imp = new Importer(path);
@@ -51,7 +43,7 @@ describe("Importer.js", function(){
 			} catch (err) {
 				console.dir(err);
 			} finally {
-				//_helpers.teardown(path);
+				_helpers.teardown(path);
 			}			
 		});
 	});

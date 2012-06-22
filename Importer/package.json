@@ -1,23 +1,23 @@
 {
-  "name": "ABAValidator",
-  "version": "0.0.3",
+  "name": "importer",
+  "version": "0.0.1",
   "author": "James Eggers <james.r.eggers@gmail.com> (http://www.jamesreggers.com/)",
-  "description": "A validation module for browsers and Node.js to validate an American Bankers Association Routing Number used in ACH payments.",
-  "homepage": "https://github.com/JamesEggers1/node-ABAValidator",
+  "description": "A module for importing a directory of Node.js modules and adding them into an array.",
+  "homepage": "https://github.com/JamesEggers1/node-importer",
   "repository": {
     "type": "git",
-    "url": "git://github.com/JamesEggers1/node-ABAValidator"
+    "url": "git://github.com/JamesEggers1/node-importer"
   },
-  "main": "./src/aba-validation",
+  "main": "./src/importer",
   "engines": {
     "node": "*"
   },
   "scripts": {
 	"test": "mocha ./tests/importer-tests.js -R spec"
   },
-  "tags": [ "ach", "validation", "browser"],
+  "tags": [ "bulk require"],
   "bugs": {
-    "url": "https://github.com/JamesEggers1/node-ABAValidator/issues"
+    "url": "https://github.com/JamesEggers1/node-importer/issues"
   },
   "devDependencies": {
 	"mocha": "1.2.0",

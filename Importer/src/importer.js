@@ -1,6 +1,7 @@
 "use strict";
 module.exports = (function(){
-	var _fs = require("fs");
+	var _fs = require("fs")
+		, _path = require("path");
 	
 	var _verifyDirectory = function(path) {
 		var stats; 
@@ -24,12 +25,13 @@ module.exports = (function(){
 	
 	var _importFiles = function(path, files){
 		var moduleList = []
+			, relativePath = _path.resolve(process.cwd() + "/" + path)
 			, trimmedName;
 		
 		files.forEach(function (element, index, array){
 			if (_fs.lstatSync(path + "/" + element).isFile()){
 				trimmedName =  element.substring(0, (element.length - 3));
-				moduleList.push(require("./" + path + "/" + trimmedName));
+				moduleList.push(require(relativePath + "/" + trimmedName));
 			}
 		});
 		
