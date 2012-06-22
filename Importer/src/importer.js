@@ -22,12 +22,33 @@ module.exports = (function(){
 		}
 	};
 	
+	var _importFiles = function(path, files){
+		var moduleList = []
+			, trimmedName;
+		
+		files.forEach(function (element, index, array){
+			if (_fs.lstatSync(path + "/" + element).isFile()){
+				trimmedName =  element.substring(0, (element.length - 3));
+				moduleList.push(require("./" + path + "/" + trimmedName));
+			}
+		});
+		
+		return moduleList;
+	};
+	
+	
 	var Obj = function(path) {
 		_verifyDirectory(path);
 		
+		var fileList = []
+			, modules = [];
 		
+		var files = _fs.readdirSync(path);
 		
+		modules = _importFiles(path, files);
 		
+		this.count = modules.length;
+		this.modules = modules;
 	};
 	
 	return Obj;
