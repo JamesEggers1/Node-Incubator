@@ -10,13 +10,7 @@ module.exports = function(path){
 	
 	var files = _fs.readdirSync(path);
 	
-	modules = _importFiles(path, files);
-	
-	var obj = {};
-	obj.count = modules.length;
-	obj.modules = modules;
-	
-	return obj;
+	return _importFiles(path, files);
 };
 
 var _verifyDirectory = function(path) {
@@ -42,16 +36,23 @@ var _verifyDirectory = function(path) {
 var _importFiles = function(path, files){
 	var moduleList = []
 		, relativePath = _path.resolve(process.cwd() + "/" + path)
-		, trimmedName;
+		, trimmedName
+		, module
+		, obj = {};
 	
 	files.forEach(function (element, index, array){
 		if (_fs.lstatSync(path + "/" + element).isFile()){
 			trimmedName =  element.substring(0, (element.length - 3));
-			moduleList.push(require(relativePath + "/" + trimmedName));
+			module = require(relativePath + "/" + trimmedName);			
+			moduleList.push(module);
+			obj[trimmedName] = module;
 		}
 	});
 	
-	return moduleList;
+	obj.length = moduleList.length;
+	obj.toArray = function(){return moduleList;};
+	
+	return obj;
 };
 
 (function(){

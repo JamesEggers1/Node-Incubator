@@ -29,22 +29,35 @@ describe("requiredir.js", function(){
 	});
 	
 	describe("Reading Files", function(){
-		
-		it("should import all modules from the filenames from the directory.", function(){
-			var path = "tmp"
-				, count = 3;
-				
-			_helpers.setup(path, count);
+		var path = "tmp"
+			, count = 3;
 			
-			try {
-				var imp = requiredir(path);
-				imp.count.should.equal(count);
-				imp.modules.length.should.equal(count);
-			} catch (err) {
-				console.dir(err);
-			} finally {
-				_helpers.teardown(path);
-			}			
+		beforeEach(function(done){
+			_helpers.setup(path, count);
+			done();
+		});
+	
+		afterEach(function(done){
+			_helpers.teardown(path);
+			done();
+		});
+	
+		it("should import all modules from the filenames from the directory.", function(){
+			var modules = requiredir(path);
+			modules.length.should.equal(count);
+			(typeof modules.mod0 === "object").should.be.true;
+			(typeof modules.mod1 === "object").should.be.true;
+			(typeof modules.mod2 === "object").should.be.true;
+		});
+		
+		it("should provide a toArray() function to access each module by index instead of name.", function(){
+			var modules = requiredir(path)
+				, modArray = modules.toArray();
+				
+			modArray.length.should.equal(count);
+			(typeof modArray[0] === "object").should.be.true;
+			(typeof modArray[1] === "object").should.be.true;
+			(typeof modArray[2] === "object").should.be.true;
 		});
 	});
 });
