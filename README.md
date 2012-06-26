@@ -13,9 +13,9 @@ After looking around NPM, I haven't been able to find a good database migrator t
 
 The npm-bootstrapper will be an automation utility that'll create a number of base files and directories that I find myself creating for each of my npm packages.
 
-## Importer ##
+## requiredir ##
 
-The Importer project provides a simple module that, when passed a directory, will import in all node modules into an object or array to be used by other modules.  Very useful for dynamically generated scripts or scripts of similar purpose and definition (e.g. database migration scripts).
+The requiredir project provides a simple module that, when passed a directory, will import in all node modules into an object or array to be used by other modules.  Very useful for dynamically generated scripts or scripts of similar purpose and definition (e.g. database migration scripts).
 
 # Previous Projects #
 
