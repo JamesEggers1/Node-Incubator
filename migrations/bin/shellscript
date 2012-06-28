@@ -5,18 +5,21 @@
  */
 
 var program = require('commander')
-	, clog = require("clog");
+	, _clog = require("clog")
+	, _clogConfig = require("../configs/clog-config");
+
+_clogConfig.default();
 
 program
-  .version('0.0.1')
+ 	.version('0.0.1')
+ 	.option('-d, --debug', 'Runs the application in debugging mode.');
 
 program
 	.command("create <description>")
 	.description("Creates a new migration script")
-	.action(require("../src/create"));
-
-
-
-
+	.action(function(description){
+		if (program.debug) {_clogConfig.debug();}
+		require("../src/create")(description);
+	});
 
 program.parse(process.argv);

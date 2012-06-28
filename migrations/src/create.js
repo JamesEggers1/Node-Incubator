@@ -27,7 +27,10 @@ var _generateFileName = function(description) {
  */
 var _establishMigrationsDirectory = function(path){
 	if (!_path.existsSync(path)){
-		_clog.warn("Migrations directory not found. Creating migrations directory at '" + path + "'.");
+		_clog.warn("*******************************************************");
+		_clog.warn("* Migrations directory not found.");
+		_clog.warn("* Creating migrations directory. at '" + path + "'.");
+		_clog.warn("*******************************************************");
 		_fs.mkdirSync(path);
 	} else {
 		_clog.debug("Migrations directory exists at '" + path + "'.");
@@ -43,7 +46,7 @@ var _establishMigrationsDirectory = function(path){
 var _createNewMigrationScript = function(path, description){
 	var filename = _generateFileName(description);
 	_fs.writeFileSync(path + '/' + filename, _template);
-	_clog.info("'" + filename + "' has been created!");
+	_clog.log("'" + filename + "' has been created!");
 };
 
 /**
@@ -52,7 +55,9 @@ var _createNewMigrationScript = function(path, description){
  * @param {string} description The description of the script.
  */
 module.exports = function(description) {
+	console.log('');
 	var migrationsDirectory = _path.resolve(process.cwd() + "/migrations");
 	_establishMigrationsDirectory(migrationsDirectory);
 	_createNewMigrationScript(migrationsDirectory, description);
+	console.log('');
 };
