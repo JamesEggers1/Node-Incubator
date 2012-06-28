@@ -1,0 +1,32 @@
+{
+  "name": "TBD",
+  "version": "0.0.1",
+  "author": "James Eggers <james.r.eggers@gmail.com> (http://www.jamesreggers.com/)",
+  "description": "A generic migration utility.",
+  "homepage": "https://github.com/JamesEggers1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JamesEggers1/Node-Incubator.git"
+  },
+  "main": "./bin/shellscript",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+	"test": "mocha tests/create-tests.js -R spec"
+  },
+  "tags": [ "migration", "change management"],
+  "bugs": {
+    "url": "https://github.com/JamesEggers1/Node-Incubator/issues"
+  },
+  "dependencies":{
+	"commander": "latest",
+	"clog": "latest",
+	"requiredir": "latest"
+  },
+  "devDependencies": {
+	"should" : "latest",
+	"mocha":"latest",
+	"rimraf": "latest"
+  }
+}
