@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var program = require('commander')
+	, clog = require("clog");
+
+program
+  .version('0.0.1')
+
+program
+	.command("create <description>")
+	.description("Creates a new migration script")
+	.action(require("../src/create"));
+
+
+
+
+
+program.parse(process.argv);
