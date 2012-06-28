@@ -1,7 +1,6 @@
 "use strict";
 
-module.exports = {
-	generateTimeStamp: function(){
+module.exports.generateTimeStamp = function(){
 						var date = new Date()
 							, year = date.getFullYear()
 							, month = date.getMonth() + 1
@@ -17,5 +16,4 @@ module.exports = {
 						if (seconds < 10) { seconds = "0" + seconds; }
 	
 						return "" + year + month + day + hours + minutes + seconds;
-					}
-};
+					};
