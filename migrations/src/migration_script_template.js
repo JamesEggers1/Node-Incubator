@@ -1,16 +1,20 @@
-"use strict";
+module.exports = (function(){
+	"use strict";
 
-var _eol = require("./eol")
-	, _template =[
-		''
-		, 'exports.up = function(){'
-		, ''
-		, '};'
-		, ''
-		, 'exports.down = function(){'
-		, ''
-		, '};'
-	].join(_eol);
+	var _eol = require("./eol")
+		, _template =[
+			''
+			, 'exports.name = "{{filename}}"'
+			, ''
+			, 'exports.up = function(){'
+			, ''
+			, '};'
+			, ''
+			, 'exports.down = function(){'
+			, ''
+			, '};'
+		].join(_eol);
 
 
-module.exports = _template;
+	return _template;	
+}());

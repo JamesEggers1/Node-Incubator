@@ -21,5 +21,14 @@ program
 		if (program.debug) {_clogConfig.debug();}
 		require("../src/create")(description);
 	});
+	
+program
+	.command("up [migration]")
+	.description("Runs the migration scripts up to the latest or specified version.")
+	.action(function(migration){
+		if (program.debug) {_clogConfig.debug();}
+		
+		require("../src/up")(migration);
+	});
 
 program.parse(process.argv);
