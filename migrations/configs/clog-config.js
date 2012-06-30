@@ -37,3 +37,15 @@ module.exports.all = function(){
 		}
 	});
 };
+
+module.exports.none = function(){
+	_clog.configure({
+		'log level': {
+			'log': false,
+			'info': false,
+			'warn': false,
+			'error': false,
+			'debug': false
+		}
+	});
+};

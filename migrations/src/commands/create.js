@@ -1,9 +1,9 @@
 module.exports = (function(){
 	"use strict";
-	var _timestamp = require("./timestamp")
+	var _timestamp = require("../utils/timestamp")
 		, _path = require("path")
 		, _fs = require("fs")
-		, _template = require("./migration_script_template")
+		, _template = require("../utils/migration_script_template")
 		, _clog = require("clog");
 
 	/**

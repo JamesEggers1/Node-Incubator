@@ -30,7 +30,7 @@ module.exports = (function(){
 			return "0";
 		} 
 		
-		return _fs.readFileSync(trackerLocation);
+		return _fs.readFileSync(trackerLocation, "utf8");
 	};
 	
 	/**

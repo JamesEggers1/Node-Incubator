@@ -13,7 +13,7 @@
     "node": "*"
   },
   "scripts": {
-	"test": "mocha tests/create-tests.js -R spec"
+	"test": "mocha tests/all-tests.js -R spec"
   },
   "tags": [ "migration", "change management"],
   "bugs": {

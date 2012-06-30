@@ -19,7 +19,7 @@ program
 	.description("Creates a new migration script")
 	.action(function(description){
 		if (program.debug) {_clogConfig.debug();}
-		require("../src/create")(description);
+		require("../src/commands/create")(description);
 	});
 	
 program
@@ -28,7 +28,7 @@ program
 	.action(function(migration){
 		if (program.debug) {_clogConfig.debug();}
 		
-		require("../src/up")(migration);
+		require("../src/commands/up")(migration);
 	});
 
 program.parse(process.argv);

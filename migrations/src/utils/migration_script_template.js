@@ -4,13 +4,13 @@ module.exports = (function(){
 	var _eol = require("./eol")
 		, _template =[
 			''
-			, 'exports.name = "{{filename}}"'
+			, 'exports.name = "{{filename}}";'
 			, ''
-			, 'exports.up = function(){'
+			, 'exports.up = function(logger){'
 			, ''
 			, '};'
 			, ''
-			, 'exports.down = function(){'
+			, 'exports.down = function(logger){'
 			, ''
 			, '};'
 		].join(_eol);

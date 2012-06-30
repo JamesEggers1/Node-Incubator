@@ -1,10 +1,11 @@
 "use strict";
 
-var _timestamp = require("../src/timestamp")
+var _timestamp = require("../src/utils/timestamp")
 	, _mocha = require("mocha")
 	, _should = require("should")
-	, _create = require("../src/create")
-	, _helper = require("./test-helper");
+	, _create = require("../src/commands/create")
+	, _helper = require("./test-helper")
+	, _clogConfig = require("../configs/clog-config").none();
 	
 describe("Create Command", function(){
 	var migrationsDirectory = "./migrations"
