@@ -5,15 +5,17 @@ A simple repository for me to experiment and work on Node.js projects before spi
 
 # Current Projects #
 
-## Database Migrator (coming soon) ##
-
-After looking around NPM, I haven't been able to find a good database migrator that works consistently.  So I'm going to write my own after the importer project gets done.
-
 ## npm-bootstrapper (coming soon) ##
 
 The npm-bootstrapper will be an automation utility that'll create a number of base files and directories that I find myself creating for each of my npm packages.
 
 # Previous Projects #
+
+## monarch (formerly "Database Migrator") ##
+
+The monarch project started as a database migrations project and ended up turning into a generic migration utility.  The project allows you to write your own logic within the migration scripts that it creates. In addition, the version control is no longer managed in a database like other migrators I've written have done.
+
+- This project has moved to my [node-monarch repository](https://github.com/JamesEggers1/node-monarch).
 
 ## requiredir (formerly Importer) ##
 
