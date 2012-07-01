@@ -131,7 +131,7 @@ module.exports = (function(){
 			if (script.name.substring(0,14) <= currentVersion
 				&& script.name.substring(0,14) > migration.substring(0,14)){
 				newVersion = script.name;
-				_clog.log("Migrating To: " + newVersion);
+				_clog.log("Reverting: " + newVersion);
 				script.down(_clog);
 			}
 		}

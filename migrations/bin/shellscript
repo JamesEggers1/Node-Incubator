@@ -40,5 +40,12 @@ program
 		require("../src/commands/down")(migration);
 	});
 
+program
+	.command("status")
+	.description("Retrieves the current version of the migrations.")
+	.action(function(){
+		if (program.debug) {_clogConfig.debug();}
+		require("../src/commands/status")();
+	});
 
 program.parse(process.argv);
