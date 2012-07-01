@@ -84,3 +84,20 @@ module.exports.upMigrationSetup = function(path, count){
 		_fs.writeFileSync(path + '/' + filename, template);
 	}
 };
+
+
+module.exports.downMigrationSetup = function(path, count){
+	var relativeDirectory = _path.resolve(process.cwd() + "/" + path)
+		, filename
+		, template;
+	
+	if(!_path.existsSync(relativeDirectory)){
+		_fs.mkdirSync(relativeDirectory);
+	}
+		
+	for (var i = 0; i <  count; i++){
+		filename = "2012063017470" + i + ".js";
+		template = _template.replace(/\{\{filename\}\}/g, filename);
+		_fs.writeFileSync(path + '/' + filename, template);
+	}
+};

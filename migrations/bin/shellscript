@@ -30,5 +30,15 @@ program
 		
 		require("../src/commands/up")(migration);
 	});
+	
+program
+	.command("down <migration>")
+	.description("Runs the migration scripts down to the specified version.")
+	.action(function(migration){
+		if (program.debug) {_clogConfig.debug();}
+
+		require("../src/commands/down")(migration);
+	});
+
 
 program.parse(process.argv);

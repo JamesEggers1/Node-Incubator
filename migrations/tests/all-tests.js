@@ -1,4 +1,5 @@
 "use strict";
 
 var create = require("./create-tests")
-	, up = require("./up-tests");
+	, up = require("./up-tests")
+	, down = require("./down-tests");

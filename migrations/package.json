@@ -20,13 +20,13 @@
     "url": "https://github.com/JamesEggers1/Node-Incubator/issues"
   },
   "dependencies":{
-	"commander": "latest",
-	"clog": "latest",
-	"requiredir": "latest"
+	"commander": "0.5.2",
+	"clog": "0.1.5",
+	"requiredir": "1.0.2"
   },
   "devDependencies": {
-	"should" : "latest",
-	"mocha":"latest",
-	"rimraf": "latest"
+	"should" : "0.6.3",
+	"mocha":"1.2.1",
+	"rimraf": "2.0.2"
   }
 }
